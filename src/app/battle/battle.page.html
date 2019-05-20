@@ -1,0 +1,41 @@
+<ion-content padding>
+  <div class="header">
+    <div>
+        <ion-icon md="md-heart" class="hearth"></ion-icon>
+        <span class="life">{{socketService.life}}</span>
+
+    </div>
+     
+      <div class="players">
+          <ion-icon name="people" class="people"></ion-icon>
+          <span class="player">{{socketService.game.players}}</span>
+          
+        </div>
+  </div>
+  <div class="progress-wrapper" *ngIf="!socketService.questionTime">
+      <div class="current">{{ socketService.max - socketService.current }}</div>
+      <round-progress [current]="socketService.current" [max]="socketService.max" [radius]="radius" [stroke]="stroke" class="circle"></round-progress>
+  </div>
+
+  <div class="question timer" *ngIf="socketService.questionTime">
+      Next question in {{socketService.timerQuestionTimeInterval}}
+  </div>
+
+
+<div class="question" [innerHTML]="socketService.game.questions[socketService.index].question">
+   
+</div>
+<div class="bottom">
+  <ion-grid>
+    <ion-row >
+      <ion-col *ngFor="let answer of socketService.game.questions[socketService.index].answers"  size="6">
+            <button   (click)="selectAnswer(answer)" [innerHTML]="answer.title" 
+            [class.questionSelected]="answer.id == socketService.selectedAnswer.id"
+            [class.good]="(socketService.questionTime && (answer.title == socketService.game.questions[socketService.index].correct_answer)) "
+            [class.wrong]="socketService.questionTime && (socketService.selectedAnswer.title != socketService.game.questions[socketService.index].correct_answer) && (answer.id == socketService.selectedAnswer.id)">
+            </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+</ion-content>

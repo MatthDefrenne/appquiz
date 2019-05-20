@@ -1,0 +1,7 @@
+{
+  "name": "quizbattleroyal",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

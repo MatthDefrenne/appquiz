@@ -1,0 +1,21 @@
+ion-content{
+    --ion-background-color:  #111F3A;
+}
+.header {
+    font-size: 7vh;
+    font-weight: 1000;
+    line-height: 0.9;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 0px #000000;
+    margin-top: 40vh;
+    margin-bottom: 5vh
+}
+.subheader {
+    font-size: 3.5vh;
+    text-align: center;
+    color: #6278a3;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: bold
+}

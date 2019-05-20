@@ -1,0 +1,6 @@
+<ion-content padding>
+  <div class="header">Choose a category</div>
+ <div  style="    padding: 0px 3vh 0px 3vh;" *ngFor="let topic of topics">
+    <button [style.background]="topic.color" (click)="joinAGame(topic.value)">{{topic.text}}</button>
+ </div>
+</ion-content>

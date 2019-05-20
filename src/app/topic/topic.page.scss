@@ -1,0 +1,52 @@
+ion-content{
+    --ion-background-color:  #111F3A;
+}
+
+button {
+    width: 100%;
+    height: 70px;
+    margin-top: 25px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 4px solid rgba(0,0,0,0.15);
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.1);
+    position: relative;
+}
+button:before {
+    content: var(--content);
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    font-size: 110px;
+    text-overflow: inherit;
+    position: absolute;
+    text-overflow: unset;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    height: 100%;
+    left: 10px;
+    top: 0px;
+    color: rgba(255, 255, 255, 0.050980392156862744);
+    cursor: pointer;
+    outline: none;
+}
+button:active {
+    border-top: 2px solid rgba(0,0,0,0.15);
+    border-bottom: 0;
+    cursor: pointer;
+    outline: none;
+}
+.header {
+    font-size: 5vh;
+    font-weight: 1000;
+    line-height: 0.9;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 0px #000000;
+    margin-top: 25px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}

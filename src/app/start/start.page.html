@@ -1,0 +1,12 @@
+<ion-content padding>
+    <div padding style="margin-top: 25vh" *ngIf="!socketService.gameWillBeging">
+        <div class="subheader">WAITING FOR OPPONENTS</div>
+        <div class="header" *ngIf="!socketService.counterIsLoading">{{socketService.game.players}} / {{socketService.game.maxPlayers}}</div>
+        <div class="header" *ngIf="socketService.counterIsLoading">Loading...</div>
+    </div>
+
+    <div padding style="margin-top: 25vh" *ngIf="socketService.gameWillBeging && !socketService.gameIsStarted">
+        <div class="subheader">GAME START IN</div>
+        <div class="header">{{socketService.countdown}}</div>
+    </div>
+</ion-content>
